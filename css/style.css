@@ -307,11 +307,43 @@ template {
   display: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading {
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-start;
+}
+.heading--center {
+  text-align: center;
+  padding: 0px 60px 0px 60px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 15px 0px 15px;
+}
+
+p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
 button {
   color: white;
   border: white 1px solid;
-  background-color: #FF79DA;
-  box-shadow: inset -10px -10px 25px 2px #9356DC;
+  background-image: linear-gradient(to left top, #9356DC, #FF79DA);
   border-radius: 25px;
   width: 200px;
   line-height: 2.5;
@@ -319,6 +351,88 @@ button {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  background-color: rgb(234, 234, 234);
+  box-shadow: inset 5px 15px 5px -10px rgb(213, 213, 213);
+  padding: 10px 0px;
+}
+.form input {
+  border: transparent;
+  background-color: rgb(234, 234, 234);
+  text-align: center;
+  width: 140px;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.functioning li {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style-type: none;
+  counter-increment: function;
+  margin-bottom: 10px;
+}
+
+ol {
+  counter-reset: function;
+  padding-inline-start: 0px;
+}
+
+li:before {
+  content: counter(function);
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  background: #9356DC;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.icone {
+  margin-top: 10px;
+  color: #7e7e7e;
+}
+.icone:hover {
+  color: #9356DC;
+}
+
+.icone-resto {
+  box-shadow: 2px 2px 10px 2px #e6e6e6;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-grow: 1;
+  margin-left: -30px;
+  padding-left: 20px;
+  z-index: 1;
+}
+.icone-resto:hover {
+  background-color: #e6e6e6;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+}
+.header__logo > img {
+  width: 140px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

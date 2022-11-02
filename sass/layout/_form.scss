@@ -1,0 +1,16 @@
+.form {
+  @include flex-center;
+  flex-direction: row;
+  gap: 10px;
+  background-color: $color-gray;
+  box-shadow: inset 5px 15px 5px -10px rgba(213, 213, 213, 255);
+  padding: 10px 0px;
+    input {
+      border: transparent;
+      background-color: $color-gray;
+      text-align: center;
+      width: 140px;
+    }
+}
+
+
