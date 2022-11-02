@@ -2,3 +2,16 @@
     display: flex;
     justify-content: center;
 }
+
+@mixin font-bold{
+    font-weight: bold;
+}
+
+@mixin gap20 {
+    gap:20px;
+}
+
+@mixin style-lien{
+    text-decoration: none;
+    color: black;
+}
