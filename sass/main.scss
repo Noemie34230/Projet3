@@ -1,18 +1,21 @@
+// BASE
+@import "./base/base";
+@import "./base/typography";
+
+
 // UTILS
 @import "./utils/variables";
 @import "./utils/mixins";
 
-// BASE
-@import "./base/base";
-@import "./base/typography";
 
 // COMPONENTS
 
 @import "./components/buttons";
 
-// LAYOUT
 
+// LAYOUT
+@import "./layout/header";
 @import "./layout/form";
 @import "./layout/container";
-@import "./layout/header";
+@import "./layout/footer";
 

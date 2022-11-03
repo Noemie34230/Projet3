@@ -1,7 +1,8 @@
 .header__logo{
 @include flex-center;
     >img{
-        width: 140px;
-        padding: 5px;
+        width: 170px;
+        height: 30px;
+        padding: 10px;
     }
 }

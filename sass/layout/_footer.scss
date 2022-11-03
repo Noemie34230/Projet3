@@ -1,0 +1,27 @@
+footer{
+    color:white;
+    background-color: #353535;
+    padding:20px;
+    .footer__heading{
+        font-size: 22px;
+        font-family: 'Shrikhand', cursive;
+        }
+}
+footer{
+    ul{
+    list-style: none;
+    padding-inline-start: 0px;
+    a{
+        color: white;
+        text-decoration: none;
+        line-height: 2;
+    }
+    }
+    .icone{
+        color:white;
+        margin-right: 15px;
+        margin-top: 0px;
+        font-size: 12px;
+        width: 15px;
+    }
+}
