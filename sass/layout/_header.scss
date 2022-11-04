@@ -1,8 +1,18 @@
 .header__logo{
 @include flex-center;
+
     >img{
         width: 170px;
         height: 30px;
         padding: 10px;
+    }
+}
+.bandeau__header{
+    @include flex-row;
+    gap: 15%;
+    .fleche{
+        color: #353535;
+        font-size: 20px;
+        padding: 15px;
     }
 }

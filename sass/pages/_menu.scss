@@ -1,0 +1,84 @@
+.resto {
+    position: relative;
+}
+.resto__image{
+    height: 250px;
+
+    position: relative;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.bandeau{
+    
+    position: absolute;
+    bottom: -35px;
+    left: 0%;
+    right: 0%;
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    @include padding20;
+    flex-grow: 1;
+    .resto__name{
+        font-size: 25px;
+        font-family:  'Shrikhand', cursive;
+    }
+    .heart{
+        position: absolute;
+        right: 5%;
+        top:10px;
+    }
+}
+
+
+
+.container-starter {
+    margin-top: 30px;
+    @include padding20;
+}
+
+.heading__main{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+
+}
+
+.tiret{
+    background-color: #99e2d0;
+    height: 2px;
+    width: 40px;
+}
+
+.choice{
+    @include flex-row ;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px 2px #e6e6e6;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    line-height: 1.5;
+    .name{
+        margin: 0px;
+    }
+    .description{
+        margin: 0px;
+    }
+    .price{
+        margin:28.08px 0px 0px;
+    }
+}
+
+.container-main-course {
+    @include padding20;
+}
+
+.container-desserts {
+    @include padding20;
+    margin-bottom: 40px;
+}
+
+
