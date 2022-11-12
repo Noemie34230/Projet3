@@ -31,13 +31,52 @@
         right: 5%;
         top:10px;
     }
+    .heart--plein{
+        right: 5%;
+        top:10px;
+    }
 }
 
 
-
-.container-starter {
+.container-starter{
     margin-top: 30px;
     @include padding20;
+}
+
+.choice{
+    opacity: 0;
+    animation: apparition $delai-animation ease-in-out forwards;
+    @for $i from 1 through 4{
+        &--#{$i} {
+            animation-delay: $delai-animation * $i;
+        }
+    }
+}
+@keyframes apparition{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    20%{
+        opacity: 0.2;
+        transform: translateY(-80px);
+    }
+    40%{
+        opacity: 0.4;
+        transform: translateY(-60px);
+    }
+    60%{
+        opacity: 0.6;
+        transform: translateY(-40px);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .heading__main{

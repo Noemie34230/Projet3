@@ -314,8 +314,6 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .heading {
@@ -396,6 +394,63 @@ button {
   width: 140px;
 }
 
+body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bloc_principal {
+  animation: principal 6s both 2s;
+}
+
+@keyframes principal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.spinner {
+  height: 600%;
+  width: 100%;
+  animation: accueil 10s backwards;
+  background-color: white;
+}
+.spinner .o {
+  border-radius: 50%;
+  border-bottom: #9356DC solid 5px;
+  border-top: #9356DC solid 5px;
+  border-right: #99E2d0 solid 5px;
+  border-left: #99E2d0 solid 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  transform-origin: center center;
+  animation: lettre 1s both 3;
+}
+
+@keyframes accueil {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes lettre {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(1turn);
+  }
+}
 .functioning {
   display: flex;
   flex-direction: column;
@@ -409,7 +464,7 @@ button {
   counter-increment: function;
   margin-bottom: 10px;
 }
-.functioning li:before {
+.functioning li::before {
   content: counter(function);
   width: 20px;
   height: 20px;
@@ -431,10 +486,6 @@ ol {
 
 .icone {
   margin-top: 10px;
-  color: #7e7e7e;
-}
-.icone:hover {
-  color: #9356DC;
 }
 
 .icone-function {
@@ -449,7 +500,10 @@ ol {
   z-index: 1;
 }
 .icone-function:hover {
-  background-color: #e6e6e6;
+  background-color: #f5edff;
+}
+.icone-function:hover .icone {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -512,8 +566,30 @@ ol {
   font-weight: bold;
 }
 
-.heart .icone:hover {
-  background-color: linear-gradient(to right bottom, #9356DC, #FF79DA);
+.heart {
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  opacity: 1;
+  transition: opacity;
+}
+.heart:hover {
+  opacity: 0;
+}
+
+.heart--plein {
+  font-size: 25px;
+  position: absolute;
+  right: 15px;
+  color: #9356DC;
+  opacity: 0;
+  transition: opacity;
+  cursor: pointer;
+  transition: color 2s;
+}
+.heart--plein:hover {
+  opacity: 1;
+  color: #FF79DA;
 }
 
 footer {
@@ -576,12 +652,59 @@ footer .icone {
   right: 5%;
   top: 10px;
 }
+.bandeau .heart--plein {
+  right: 5%;
+  top: 10px;
+}
 
 .container-starter {
   margin-top: 30px;
   padding: 20px;
 }
 
+.choice {
+  opacity: 0;
+  animation: apparition 0.5s ease-in-out forwards;
+}
+.choice--1 {
+  animation-delay: 0.5s;
+}
+.choice--2 {
+  animation-delay: 1s;
+}
+.choice--3 {
+  animation-delay: 1.5s;
+}
+.choice--4 {
+  animation-delay: 2s;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  20% {
+    opacity: 0.2;
+    transform: translateY(-80px);
+  }
+  40% {
+    opacity: 0.4;
+    transform: translateY(-60px);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateY(-40px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .heading__main {
   text-transform: uppercase;
   font-size: 20px;
