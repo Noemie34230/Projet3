@@ -310,6 +310,7 @@ template {
 body {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 body {
@@ -717,6 +718,13 @@ footer .icone {
   width: 40px;
 }
 
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+  transition: width 330ms 15ms;
+}
+
 .choice {
   display: flex;
   flex-direction: row;
@@ -726,15 +734,58 @@ footer .icone {
   padding: 10px;
   margin-top: 15px;
   line-height: 1.5;
+  cursor: pointer;
 }
 .choice .name {
   margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .choice .description {
   margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.choice .container-price {
+  display: flex;
+  transform: translateX(0px);
+  gap: 100%;
+  width: 10%;
 }
 .choice .price {
+  display: flex;
   margin: 28.08px 0px 0px;
+  transition: translateX 330ms 15ms;
+}
+
+.choice:hover > .text {
+  width: 60%;
+}
+.choice:hover > .container-price > .check {
+  transform: translateX(-60px);
+  opacity: 1;
+}
+.choice:hover > .container-price > .check > .icone {
+  transform: rotate(1turn);
+}
+.choice:hover > .container-price > .price {
+  transform: translateX(-40px);
+}
+
+.check {
+  background-color: #99E2d0;
+  border-radius: 0px 20px 20px 0px;
+  margin: -10px -10px;
+  opacity: 0;
+  transition: all 330ms;
+}
+.check .icone {
+  color: white;
+  margin-top: 0px;
+  font-size: 24px;
+  padding: 20px;
+  transform: rotate(0deg);
+  transition: transform 600ms;
 }
 
 .container-main-course {
