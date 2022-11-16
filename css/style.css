@@ -334,11 +334,15 @@ body {
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 10px;
 }
 p .functioning {
   font-weight: 500;
+}
+
+h3 {
+  font-size: 16px;
 }
 
 button {
@@ -352,6 +356,11 @@ button {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 5px 5px 10px 5px black;
+  background-image: linear-gradient(to left top, #353535, #9356DC);
 }
 
 .order {
@@ -455,7 +464,7 @@ body {
 .functioning {
   display: flex;
   flex-direction: column;
-  padding: 60px 10px 60px 10px;
+  padding: 60px 20px 60px 20px;
 }
 .functioning li {
   display: flex;
@@ -480,11 +489,24 @@ body {
   z-index: 2;
 }
 
+@media screen and (min-width: 1200px) {
+  .functioning li {
+    width: 30%;
+  }
+}
 ol {
   counter-reset: function;
   padding-inline-start: 0px;
 }
 
+@media screen and (min-width: 1200px) {
+  ol {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+  }
+}
 .icone {
   margin-top: 10px;
 }
@@ -508,7 +530,7 @@ ol {
 }
 
 .restaurants {
-  padding: 10px 10px 60px 10px;
+  padding: 10px 20px 60px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -535,6 +557,11 @@ ol {
   z-index: 1;
 }
 
+@media screen and (min-width: 600px) {
+  .card img {
+    object-position: center;
+  }
+}
 .card--center img {
   object-position: center;
 }
@@ -571,32 +598,27 @@ ol {
   font-size: 25px;
   cursor: pointer;
   position: relative;
-  opacity: 1;
-  transition: opacity;
-}
-.heart:hover {
-  opacity: 0;
 }
 
 .heart--plein {
   font-size: 25px;
   position: absolute;
   right: 15px;
-  color: #9356DC;
+  background: linear-gradient(to left, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
   opacity: 0;
-  transition: opacity;
+  transition: opacity 0.5s;
   cursor: pointer;
-  transition: color 2s;
 }
 .heart--plein:hover {
   opacity: 1;
-  color: #FF79DA;
 }
 
 footer {
   color: white;
   background-color: #353535;
-  padding: 20px;
+  padding: 25px;
 }
 footer .footer__heading {
   font-size: 22px;
@@ -663,6 +685,12 @@ footer .icone {
   padding: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .container-starter {
+    width: 29%;
+    display: inline-block;
+  }
+}
 .choice {
   opacity: 0;
   animation: apparition 0.5s ease-in-out forwards;
@@ -721,8 +749,11 @@ footer .icone {
 .text {
   white-space: nowrap;
   overflow: hidden;
-  width: 90%;
-  transition: width 330ms 15ms;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: width;
+  transition-delay: 150ms;
 }
 
 .choice {
@@ -748,28 +779,27 @@ footer .icone {
 }
 .choice .container-price {
   display: flex;
-  transform: translateX(0px);
-  gap: 100%;
-  width: 10%;
+  transform: translateX(55px);
+  transition: all 330ms;
 }
 .choice .price {
   display: flex;
-  margin: 28.08px 0px 0px;
-  transition: translateX 330ms 15ms;
+  margin: 24px 0px 0px;
+  transform: translateX(-30px);
+  transition: translateX;
 }
 
 .choice:hover > .text {
-  width: 60%;
+  width: 70%;
+}
+.choice:hover > .container-price {
+  transform: translateX(0px);
 }
 .choice:hover > .container-price > .check {
-  transform: translateX(-60px);
   opacity: 1;
 }
 .choice:hover > .container-price > .check > .icone {
   transform: rotate(1turn);
-}
-.choice:hover > .container-price > .price {
-  transform: translateX(-40px);
 }
 
 .check {
@@ -783,7 +813,7 @@ footer .icone {
   color: white;
   margin-top: 0px;
   font-size: 24px;
-  padding: 20px;
+  padding: 20px 10px;
   transform: rotate(0deg);
   transition: transform 600ms;
 }
@@ -792,9 +822,22 @@ footer .icone {
   padding: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .container-main-course {
+    width: 29%;
+    display: inline-block;
+  }
+}
 .container-desserts {
   padding: 20px;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container-desserts {
+    width: 29%;
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

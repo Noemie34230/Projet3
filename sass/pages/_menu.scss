@@ -11,9 +11,7 @@
         object-fit: cover;
     }
 }
-
 .bandeau{
-    
     position: absolute;
     bottom: -35px;
     left: 0%;
@@ -40,10 +38,14 @@
 
 .container-starter{
     margin-top: 30px;
-
     @include padding20;
 }
-
+@media screen and (min-width:1200px){
+    .container-starter{
+    width: 29%;
+    display:inline-block;
+    }
+}
 .choice{
     opacity: 0;
     animation: apparition $delai-animation ease-in-out forwards;
@@ -53,6 +55,7 @@
         }
     }
 }
+
 @keyframes apparition{
     0%{
         opacity: 0;
@@ -84,7 +87,6 @@
     text-transform: uppercase;
     font-size: 20px;
     font-weight: normal;
-
 }
 
 .tiret{
@@ -95,9 +97,11 @@
 .text{
     white-space: nowrap;
     overflow: hidden;
-    width: 90%;
-    transition: width 330ms 15ms;
-
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: width;
+    transition-delay: 150ms;
 }
 
 .choice{
@@ -108,9 +112,7 @@
     padding: 10px;
     margin-top: 15px;
     line-height: 1.5;
-
     cursor: pointer;
-   
     .name{
         margin: 0px;
         overflow: hidden;
@@ -120,44 +122,38 @@
         margin: 0px;
         overflow: hidden;
         text-overflow: ellipsis;
-
     }
-
-.container-price{
-display: flex;
-transform: translateX(0px);
-gap: 100%;
-width: 10%;
-
-}
-.price{
-        
+    .container-price{
     display: flex;
-    margin:28.08px 0px 0px;
-    transition: translateX 330ms 15ms;
+    transform: translateX(55px);
+    transition: all 330ms;
+    }
+    .price{
+        display: flex;
+        margin:24px 0px 0px;
+        transform: translateX(-30px);
+        transition: translateX;
     }
 
 }   
 
+
 .choice{
     &:hover > .text{
-        width: 60%;
+        width: 70%;
     }
     &:hover > .container-price{
+            transform: translateX(0px);
         & > .check{
-            transform: translateX(-60px);
+           
             opacity: 1;
+            
             & > .icone{
                 transform: rotate(1turn);
             }
         }
-        & > .price{
-            transform: translateX(-40px);
-        }
     }
 }
-
-
 .check{
     background-color: $color-tertiary;
     border-radius: 0px 20px 20px 0px;
@@ -168,23 +164,31 @@ width: 10%;
         color: white;
         margin-top: 0px;
         font-size: 24px;
-        @include padding20;
-       transform: rotate(0deg);
+        padding: 20px 10px;
+        transform: rotate(0deg);
         transition: transform 600ms;
 
     }
 
 }
 
-
-
 .container-main-course {
     @include padding20;
 }
-
+@media screen and (min-width:1200px){
+    .container-main-course{
+    width: 29%;
+    display:inline-block;
+    }
+}
 .container-desserts {
     @include padding20;
     margin-bottom: 40px;
 }
-
+@media screen and (min-width:1200px){
+    .container-desserts{
+    width: 29%;
+    display:inline-block;
+    }
+}
 
