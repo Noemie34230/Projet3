@@ -67,6 +67,9 @@ body{
     list-style-type: none;
     counter-increment: function;
     margin-bottom: 10px;
+    .icone{
+      color: #7e7e7e;
+    }
     &::before 
     {
       content: counter(function);
@@ -109,7 +112,7 @@ ol
 
 .icone{
     margin-top: 10px;
-    color: #7e7e7e;
+
   }
   
 .icone-function{

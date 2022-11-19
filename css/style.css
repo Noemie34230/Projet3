@@ -474,6 +474,9 @@ body {
   counter-increment: function;
   margin-bottom: 10px;
 }
+.functioning li .icone {
+  color: #7e7e7e;
+}
 .functioning li::before {
   content: counter(function);
   width: 20px;
@@ -509,7 +512,6 @@ ol {
 }
 .icone {
   margin-top: 10px;
-  color: #7e7e7e;
 }
 
 .icone-function {
