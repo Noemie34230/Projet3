@@ -360,7 +360,7 @@ button {
 }
 button:hover {
   box-shadow: 5px 5px 10px 5px black;
-  background-image: linear-gradient(to left top, #353535, #9356DC);
+  opacity: 0.7;
 }
 
 .order {
@@ -509,6 +509,7 @@ ol {
 }
 .icone {
   margin-top: 10px;
+  color: #7e7e7e;
 }
 
 .icone-function {
@@ -525,7 +526,7 @@ ol {
 .icone-function:hover {
   background-color: #f5edff;
 }
-.icone-function:hover .icone {
+.icone-function:hover > .icone {
   color: #9356DC;
 }
 
@@ -789,19 +790,6 @@ footer .icone {
   transition: translateX;
 }
 
-.choice:hover > .text {
-  width: 70%;
-}
-.choice:hover > .container-price {
-  transform: translateX(0px);
-}
-.choice:hover > .container-price > .check {
-  opacity: 1;
-}
-.choice:hover > .container-price > .check > .icone {
-  transform: rotate(1turn);
-}
-
 .check {
   background-color: #99E2d0;
   border-radius: 0px 20px 20px 0px;
@@ -816,6 +804,19 @@ footer .icone {
   padding: 20px 10px;
   transform: rotate(0deg);
   transition: transform 600ms;
+}
+
+.choice:hover > .text {
+  width: 70%;
+}
+.choice:hover > .container-price {
+  transform: translateX(0px);
+}
+.choice:hover > .container-price > .check {
+  opacity: 1;
+}
+.choice:hover > .container-price > .check > .icone {
+  transform: rotate(1turn);
 }
 
 .container-main-course {

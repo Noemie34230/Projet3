@@ -109,7 +109,9 @@ ol
 
 .icone{
     margin-top: 10px;
+    color: #7e7e7e;
   }
+  
 .icone-function{
     box-shadow: 2px 2px 10px 2px #e6e6e6;
     border-radius: 15px;
@@ -122,18 +124,13 @@ ol
     z-index: 1;
     &:hover{
         background-color: #f5edff;
-        @if(background-color)==white{
-          .icone{
-          color: #7e7e7e;
-          }
-        }
-        @else{
-          .icone{
+        
+          & > .icone{
           color: $color-primary;
           }
         }
     }
-}
+
 
 .restaurants{
   padding: 10px 20px 60px 20px;
