@@ -220,14 +220,24 @@ ol
   background: linear-gradient(to left, $color-primary, $color-secondary);
   background-clip:text ;
   color: transparent;
-  opacity:0;
-  transition: opacity 0.5s;
   cursor: pointer;
+  opacity: 0;
   &:hover {
-    opacity: 1;
+    animation: heart 1s forwards;
     }  
 } 
 
+@keyframes heart{
+  0%{
+    background-size: 0%;
+    opacity: 0;}
+
+  100%{
+    background-size: 100%;
+    opacity: 1;
+  }
+
+}
 
 
 

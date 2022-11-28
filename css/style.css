@@ -610,14 +610,23 @@ ol {
   background: linear-gradient(to left, #9356DC, #FF79DA);
   background-clip: text;
   color: transparent;
-  opacity: 0;
-  transition: opacity 0.5s;
   cursor: pointer;
+  opacity: 0;
 }
 .heart--plein:hover {
-  opacity: 1;
+  animation: heart 1s forwards;
 }
 
+@keyframes heart {
+  0% {
+    background-size: 0%;
+    opacity: 0;
+  }
+  100% {
+    background-size: 100%;
+    opacity: 1;
+  }
+}
 footer {
   color: white;
   background-color: #353535;
